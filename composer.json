@@ -1,0 +1,34 @@
+{
+    "name": "martinusso/cobranca",
+    "type": "library",
+    "description": "Boletos em PHP",
+    "keywords": ["PHP", "cobrança", "boleto"],
+    "homepage": "https://github.com/martinusso/cobranca-php",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7",
+        "phpstan/phpstan": "^0.10.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cobranca\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cobranca\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "cs": "phpcs --standard=PSR2 src",
+        "test": "phpunit -c phpunit.xml --colors=always",
+        "test-cover": "phpunit --coverage-text",
+        "phpstan": "phpstan analyse src --level=7"
+    }
+}
